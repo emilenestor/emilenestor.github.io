@@ -17,13 +17,13 @@ document.getElementById("fullName").innerHTML = "Welcome, " + fname + " " + lnam
 let pString = "Email: " + email + "<br>" + "Born: " + birthdate + "<br>";
 
 let languages = [];
-if (csharp = "on") {
+if (csharp == "on") {
     languages.push("C#")
 }
-if (js = "on") {
+if (js == "on") {
     languages.push("JS")
 }
-if (skanska = "on") {
+if (skanska == "on") {
     languages.push("Skånska")
 }
 if (languages.length > 0) {
