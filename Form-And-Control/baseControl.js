@@ -6,9 +6,9 @@ let fname = searchParams.get("fname");
 let lname = searchParams.get("lname");
 let email = searchParams.get("email");
 let birthdate = searchParams.get("birthdate");
-let csharp = searchParams.get("csharp");
-let js = searchParams.get("js");
-let skanska = searchParams.get("skanska");
+let cbcsharp = searchParams.get("cbcsharp");
+let cbjs = searchParams.get("cbjs");
+let cbskanska = searchParams.get("cbskanska");
 
 let inCage = searchParams.get("inCage");
 
@@ -17,13 +17,13 @@ document.getElementById("fullName").innerHTML = "Welcome, " + fname + " " + lnam
 let pString = "Email: " + email + "<br>" + "Born: " + birthdate + "<br>";
 
 let languages = [];
-if (csharp == "on") {
+if (cbcsharp == "on") {
     languages.push("C#")
 }
-if (js == "on") {
+if (cbjs == "on") {
     languages.push("JS")
 }
-if (skanska == "on") {
+if (cbskanska == "on") {
     languages.push("Skånska")
 }
 if (languages.length > 0) {
@@ -40,4 +40,4 @@ else {
     pString += "Status: Coder on the Run";
 }
 
-pString += document.getElementById("p1").innerHTML = pString;
+document.getElementById("p1").innerHTML = pString;

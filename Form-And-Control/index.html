@@ -11,7 +11,7 @@
 
 <body>
     <main>
-        <form id="myForm" action="controlPage.html">
+        <form name="myForm" id="myForm" action="secondPage.html" onsubmit="return checkValid()">
 
             <label for="fname">First name: </label><br>
             <input type="text" name="fname" placeholder="Jane" required="required">
@@ -30,15 +30,15 @@
             <br>
 
             <p>Proficient in these languages</p>
-            <input type="checkbox" name="csharp">
+            <input type="checkbox" name="cbcsharp">
             <label for="checkbox1" id="csharp">C#</label>
             <br>
 
-            <input type="checkbox" name="js">
+            <input type="checkbox" name="cbjs">
             <label for="checkbox2" id="js">JS</label>
             <br>
 
-            <input type="checkbox" name="skanska">
+            <input type="checkbox" name="cbskanska">
             <label for="checkbox3" id="skanska">Skånska</label>
             <br>
 
