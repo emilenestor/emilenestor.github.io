@@ -26,10 +26,12 @@ main {
     padding: 1rem;
     margin: .5rem;
     border-radius: .5rem;
-    transition: all 0.3s ease;    
+    transition: all 0.2s ease;    
 }
+
 .projects a:hover{
-    transform: scale(1.05);    
+    transform: scale(0.98);  
+    opacity: 0.95;  
 }
 
 
