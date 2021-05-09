@@ -92,4 +92,10 @@ main{
 .searchResult img{
     margin: .8rem;
     border-radius: .5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.searchResult img:hover{
+    transform: scale(0.98);
+    opacity: 0.8;    
 }

@@ -8,9 +8,11 @@ const searchResult = document.querySelector(".searchResult");
 
 
 searchBtn.addEventListener("click", async function () {
-    const response = await fetch(`https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=${apiKey}&text=${searchTxt.value}&per_page=20&sort=relevance&format=json&nojsoncallback=1`)
-    const data = await response.json()
+    const response = await fetch(`https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=${apiKey}&text=${searchTxt.value}&per_page=20&sort=relevance&format=json&nojsoncallback=1`);
+    const data = await response.json();
     console.log(data);
+
+    searchResult.innerHTML = "";
 
     data.photos.photo.forEach(photo => {
 
@@ -21,9 +23,14 @@ searchBtn.addEventListener("click", async function () {
         const thumbnail = document.createElement("img");
         thumbnail.src = `https://live.staticflickr.com/${serverId}/${id}_${secret}_${size}.jpg`
         searchResult.appendChild(thumbnail)
-        
     });
-})
+    const searchResultImgs = document.querySelectorAll(".searchResult img");
+    searchResultImgs.forEach(img => {
+        img.addEventListener("click", function () {
+            console.log(img.src);
+        });
+    });
+});
 
 searchBar.addEventListener("keyup", function (event) {
     if (event.key === 'Enter') {
