@@ -20,6 +20,22 @@ main{
     box-shadow: inset 0 0 5rem 1.5rem rgba(255, 105, 180, 0.4);
 }
 
+.searchBar {  
+    display: flex; 
+    padding: 0.1rem;
+    margin: 1rem;
+    margin-top: 3rem;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    border-radius: 2.5rem;
+    background-color: whitesmoke;
+    box-shadow: 0 0 1rem rgba(255, 105, 180, 0.2);
+    max-width: 600px;
+    transition: all 0.3s ease;
+}
+
 .searchTxt{
     display: flex;
     width: 100%;
@@ -40,22 +56,6 @@ main{
     transition: all 0.3s ease;
 }
 
-.searchBar {  
-    display: flex; 
-    padding: 0.1rem;
-    margin: 1rem;
-    margin-top: 3rem;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-between;
-    height: 4rem;
-    border-radius: 2.5rem;
-    background-color: whitesmoke;
-    box-shadow: 0 0 1rem rgba(255, 105, 180, 0.2);
-    max-width: 600px;
-    transition: all 0.3s ease;
-}
-
 .searchBtn {   
     padding: 1rem;
     display: flex;
@@ -69,11 +69,9 @@ main{
     text-align: center;
     transition: all 0.3s ease;
 }
-
 .searchBtn:focus {
     outline: none;
 }
-
 .searchBtn:hover {
     cursor: pointer;
     transform: scale(1.05);    
@@ -88,7 +86,6 @@ main{
     max-width: 1000px;
     margin: 2rem;
 }
-
 .searchResult img{
     margin: .8rem;
     border-radius: .5rem;
@@ -98,4 +95,23 @@ main{
 .searchResult img:hover{
     transform: scale(0.98);
     opacity: 0.8;    
+}
+
+.lightbox{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+.lightbox.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.lightbox img{
+    max-height: 90%;
+    max-width: 90%;
 }
