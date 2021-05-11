@@ -1,5 +1,6 @@
 const apiKey = "ed033607eb107d8e7d8c5f174bd2209d";
 const searchBar = document.querySelector(".searchBar");
+const searchTxt = document.querySelector(".searchTxt");
 const searchBtn = document.querySelector(".searchBtn");
 const searchResult = document.querySelector(".searchResult");
 const lightbox = document.querySelector(".lightbox");
@@ -8,7 +9,6 @@ const largeImgSize = "b";
 
 //Image URL
 //https://live.staticflickr.com/{server-id}/{id}_{secret}_{size-suffix}.jpg
-
 
 searchBtn.addEventListener("click", async function () {
     const response = await fetch(`https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=${apiKey}&text=${searchTxt.value}&per_page=20&sort=relevance&format=json&nojsoncallback=1`);
@@ -40,10 +40,8 @@ searchBtn.addEventListener("click", async function () {
     });
 });
 
-searchBar.addEventListener("keyup", function (event) {
+searchTxt.addEventListener("keyup", function (event) {
     if (event.key === 'Enter') {
-        // Cancel the default action, if needed
-        event.preventDefault();
         // Trigger the button element with a click
         searchBtn.click();
     }
