@@ -6,7 +6,6 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    /*background-color: peachpuff;*/
 }  
 
 main{
@@ -18,7 +17,6 @@ main{
     justify-content: center;
     align-items: center;
     background-image: radial-gradient(circle, #ffdab9, #ffdab9, #ffdab9, #ffdab9, #ffdab9, #ffd1b0, #ffc8a9, #ffbfa2, #ffa99a, #ff929c, #ff7ca9, #ff69bf);
-    /*box-shadow: inset 0 0 5rem 1.5rem rgba(255, 105, 180, 0.4);*/
 }
 
 .searchBar {  
@@ -96,6 +94,22 @@ main{
 .searchResult img:hover{
     transform: scale(0.98);
     opacity: 0.8;    
+}
+
+.scrollInstruction{
+    display: none;
+    opacity: 0.6;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+}
+
+footer{
+    width: 100%;
+    height: 5rem;
+    display: none;
+    background-color: hotpink;
 }
 
 .lightbox{
