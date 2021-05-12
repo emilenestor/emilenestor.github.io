@@ -91,6 +91,8 @@ main{
 .searchResult img{
     margin: .8rem;
     border-radius: .5rem;
+    height: 150px;
+    width: 150px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
