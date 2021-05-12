@@ -10,7 +10,7 @@ const footer = document.querySelector("footer");
 const lightbox = document.querySelector(".lightbox");
 const thumbnailSize = "q";
 const largeImgSize = "b";
-let imgsPerPage = 20;
+let imgsPerPage = 10;
 let page = 1;
 
 
@@ -57,7 +57,8 @@ async function fetchData() {
 
         //Makes the images clickable for a larger version
         const searchResultImgs = document.querySelectorAll(".searchResult img");
-        for (let index = imgsPerPage * (page - 1); index < searchResultImgs.length; index++) {
+        console.log(searchResultImgs.length);
+        for (let index = searchResultImgs.length - data.photos.photo.length; index < searchResultImgs.length; index++) {
 
             searchResultImgs[index].addEventListener("click", function () {
                 lightbox.classList.add("active");
@@ -113,7 +114,7 @@ lightbox.addEventListener("click", function (event) {
 });
 
 window.onscroll = function () {
-    if (document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         backToTop.style.display = "flex";
     } else {
         backToTop.style.display = "none";
@@ -124,4 +125,3 @@ backToTop.addEventListener("click", function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
-
