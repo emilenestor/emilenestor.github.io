@@ -31,8 +31,10 @@ searchBtn.addEventListener("click", async function () {
             throw data.message;
         }
 
+        //Resets a few parameters
         searchResult.innerHTML = "";
         resultNumber.style.display = "none";
+        scrollInstruction.style.display = "none";
         footer.style.display = "none";
         page = 1;
 
