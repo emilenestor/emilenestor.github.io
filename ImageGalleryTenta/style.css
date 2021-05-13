@@ -78,6 +78,32 @@ main{
     transition: all 0.1s ease;
 }
 
+.searchSpec{
+    display: flex;
+    width: 90%;
+    max-width: 600px;
+    justify-content: space-evenly;
+}
+
+.customSelect{
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.5rem;;
+    border-style: none;
+    border-radius: 1rem;
+    color: white;
+    background-color: hotpink;
+    transition: all 0.3s ease;
+}
+.customSelect:focus{
+    outline: none;
+    border-radius: 1rem 1rem 0 0;
+}
+.customSelect:hover:not(:focus){
+    opacity: 0.6;
+}
+
+
 .searchResult{
     display: flex;
     flex-wrap: wrap;

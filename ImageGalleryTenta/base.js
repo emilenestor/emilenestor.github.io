@@ -10,8 +10,12 @@ const footer = document.querySelector("footer");
 const lightbox = document.querySelector(".lightbox");
 const thumbnailSize = "q";
 const largeImgSize = "b";
-let imgsPerPage = 10;
+const imgsPerPage = document.getElementById("imgsPerPage");
+const sortOptions = document.getElementById("sortOptions")
 let page = 1;
+let latestSearchTxt = "";
+let latestSort = "";
+let latestImgsPerPage = "";
 
 
 let options = {
@@ -32,12 +36,16 @@ searchBtn.addEventListener("click", async function () {
     footer.style.display = "none";
     page = 1;
 
+    latestSearchTxt = searchTxt.value;
+    latestSort = sortOptions.value;
+    latestImgsPerPage = imgsPerPage.value;
+
     await fetchData();
 });
 
 async function fetchData() {
     try {
-        const response = await fetch(`https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=${apiKey}&text=${searchTxt.value}&page=${page}&per_page=${imgsPerPage}&sort=relevance&format=json&nojsoncallback=1`);
+        const response = await fetch(`https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=${apiKey}&text=${latestSearchTxt}&page=${page}&per_page=${latestImgsPerPage}&sort=${latestSort}&format=json&nojsoncallback=1`);
         const data = await response.json();
 
         if (data.stat == "fail") {

@@ -18,9 +18,31 @@
             <span class="material-icons searchBtn">
                 search
             </span>
-        </div> 
-        <p class="resultNumber"></p>       
-        <p class="scrollInstruction"><span class="material-icons">arrow_downward</span> Scroll down to load more images <span class="material-icons">arrow_downward</span></p>
+        </div>
+        <div class="searchSpec">
+            <div>
+                <label for="sortOptions">Sort by:</label>
+                <select class="customSelect" id="sortOptions">
+                    <option value="relevance">Relevance</option>
+                    <option value="date-posted-desc">Date Posted</option>
+                    <option value="date-taken-desc">Date Taken</option>
+                    <option value="interestingness-desc">Interesting</option>
+                </select>
+            </div>
+            <div>
+                <label for="imgsPerPage">Images per load:</label>
+                <select class="customSelect" id="imgsPerPage">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+        </div>
+        <p class="resultNumber"></p>
+        <p class="scrollInstruction"><span class="material-icons">arrow_downward</span> Scroll down to load more images
+            <span class="material-icons">arrow_downward</span>
+        </p>
         <div class="searchResult">
         </div>
     </main>
